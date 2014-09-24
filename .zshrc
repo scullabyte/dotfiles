@@ -6,23 +6,10 @@ else
    print ".alias file not found"
 fi
 
-alias bower='noglob bower'
-alias dev="Drive/Development"
-alias ns="Drive/Development/learning/nodeschool"
-alias ls="ls -la"
-alias tmux="TERM=screen-256color-bce tmux"
-alias vim="mvim -v"
-alias spotify="osascript ~/Drive/Scripts/SpotifyControl.scpt"
-alias spot="osascript ~/Drive/Scripts/SpotifyControl.scpt play"
-alias sp="osascript ~/Drive/Scripts/SpotifyControl.scpt play"
-alias ss="osascript ~/Drive/Scripts/SpotifyControl.scpt pause"
-alias sj="osascript ~/Drive/Scripts/SpotifyControl.scpt next"
-alias sk="osascript ~/Drive/Scripts/SpotifyControl.scpt previous"
-alias t="trash"
-alias nw="~/node-webkit.app/Contents/MacOS/node-webkit"
+for file in ~/.{aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
-
-alias vd="vim -p \`git diff --name-only\`"
 export EDITOR=vim
 
 export LC_ALL=en_US.UTF-8

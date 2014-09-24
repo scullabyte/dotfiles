@@ -7,10 +7,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Drive"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias dev="cd ~/Development"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -142,3 +142,23 @@ alias reload="exec $SHELL -l"
 
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
+
+# Not Mathius
+alias ls="ls -la"
+alias bower='noglob bower'
+alias tmux="TERM=screen-256color-bce tmux"
+alias vim="mvim -v"
+#
+#spotify controls
+alias spotify="osascript ~/dotfiles/Scripts/SpotifyControl.scpt"
+alias spot="osascript ~/dotfiles/Scripts/SpotifyControl.scpt play"
+alias sp="osascript ~/dotfiles/Scripts/SpotifyControl.scpt play"
+alias ss="osascript ~/dotfiles/Scripts/SpotifyControl.scpt pause"
+alias sj="osascript ~/dotfiles/Scripts/SpotifyControl.scpt next"
+alias sk="osascript ~/dotfiles/Scripts/SpotifyControl.scpt previous"
+#Sindres trash (instead of rm)
+alias t="trash"
+
+alias nw="~/node-webkit.app/Contents/MacOS/node-webkit"
+
+alias vd="vim -p \`git diff --name-only\`"
