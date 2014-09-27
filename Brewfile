@@ -22,7 +22,9 @@ install bash
 install bash-completion
 
 
+# Some command line things
 install spark
+install peco
 
 # Install wget with IRI support
 install wget --enable-iri

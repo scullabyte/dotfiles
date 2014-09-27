@@ -1,14 +1,11 @@
 ZSH=$HOME/.oh-my-zsh
 
-if [ -f ~/.aliases ]; then
-   source ~/.aliases
-else
-   print ".alias file not found"
-fi
-
 for file in ~/.{aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
+# Use Z
+. ~/code/z/z.sh
 
 export EDITOR=vim
 

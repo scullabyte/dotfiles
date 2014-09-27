@@ -45,8 +45,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update'
-
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update; source ~/.osx'
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -150,12 +149,12 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias vim="mvim -v"
 #
 #spotify controls
-alias spotify="osascript ~/dotfiles/Scripts/SpotifyControl.scpt"
-alias spot="osascript ~/dotfiles/Scripts/SpotifyControl.scpt play"
-alias sp="osascript ~/dotfiles/Scripts/SpotifyControl.scpt play"
-alias ss="osascript ~/dotfiles/Scripts/SpotifyControl.scpt pause"
-alias sj="osascript ~/dotfiles/Scripts/SpotifyControl.scpt next"
-alias sk="osascript ~/dotfiles/Scripts/SpotifyControl.scpt previous"
+alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
+alias spot="osascript ~/code/SpotifyControl/SpotifyControl.scpt play"
+alias sp="osascript ~/code/SpotifyControl/SpotifyControl.scpt play"
+alias ss="osascript ~/code/SpotifyControl/SpotifyControl.scpt pause"
+alias sj="osascript ~/code/SpotifyControl/SpotifyControl.scpt next"
+alias sk="osascript ~/code/SpoifyControl/SpotifyControl.scpt previous"
 #Sindres trash (instead of rm)
 alias t="trash"
 
