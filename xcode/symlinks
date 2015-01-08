@@ -1,0 +1,4 @@
+cd Build/XVim/ && make
+ln -s ~/dotfiles/xcode/FontAndColorThemes/ ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+ln -s ~/dotfiles/xcode/Plugins/ ~/Library/Application\ Support/Developer/Shared/Xcode/Plugins/
+ln -s ~/dotfiles/xcode/.xvimrc ~/.xvimrc

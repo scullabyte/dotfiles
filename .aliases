@@ -1,4 +1,4 @@
-# Easier navigation: .., ..., ...., ....., ~ and -
+#kb502139 kb502139  Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -14,6 +14,9 @@ alias dev="cd ~/Development"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+# Use harmony for gulp
+alias gulp='node --harmony `which gulp`'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

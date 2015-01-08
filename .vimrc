@@ -1,29 +1,29 @@
-let g:vimsauce_settings = {}
+let g:vimsauce = {}
 
-let g:vimsauce_settings.version = 1
-let g:vimsauce_settings.default_indent = 3
-let g:vimsauce_settings.max_column = 80
-let g:vimsauce_settings.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm']
-let g:vimsauce_settings.colorscheme = 'github'
+let g:vimsauce.version = 1
+let g:vimsauce.default_indent = 3
+let g:vimsauce.max_column = 80
+let g:vimsauce.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm']
+let g:vimsauce.colorscheme = 'github'
 let g:dark='molokai'
 let g:light='github'
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_sugar = 1
-let g:vimsauce_settings.colorscheme = g:dark
+let g:vimsauce.colorscheme = g:dark
 
 "Turn on indent guides at start
 let g:indent_guides_auto_colors = 1
 
 "invertColors
 function! g:Invert()
-   if(g:vimsauce_settings.colorscheme == g:dark)
-      let g:vimsauce_settings.colorscheme = g:light
+   if(g:vimsauce.colorscheme == g:dark)
+      let g:vimsauce.colorscheme = g:light
    else
-      let g:vimsauce_settings.colorscheme = g:dark
+      let g:vimsauce.colorscheme = g:dark
    endif
-   exec 'colorscheme '.g:vimsauce_settings.colorscheme
+   exec 'colorscheme '.g:vimsauce.colorscheme
 endfunc
 
 map <space>i :call g:Invert()<CR>
@@ -57,7 +57,7 @@ set autoread
 set autowrite
 set autowriteall
 
-let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save = 0  " enable AutoSave on Vim startup
 
 "Quick Search for TODO/FIXME
 " MUTED BC OF ANGUALAR TEST BELOW
@@ -81,7 +81,7 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>"
 " cursor happens to be.
 nnoremap zO zCzO
 let g:ackprg = 'ag --nogroup --nocolor -p ~/.agignore --column'
-" let g:agprg="~/Development/zommBot/ --column"
+"Scott Banister let g:agprg="~/Development/zommBot/ --column"
 nnoremap <leader>ne :NERDTreeToggle<CR>
 nnoremap <space>. :Ack ''<left>
 nnoremap <space>.j :Ack '' -G js$<left><left><left><left><left><left><left><left>
@@ -101,8 +101,7 @@ nnoremap <space>nij i{{{javascript}}}<left><left><left><cr><cr><up>
 nnoremap <space>nih i{{{html}}}<left><left><left><cr><cr><up>
 
 "Angular thing to switch to test
-map <space>t :A<CR>
-"force save
+map <space>t :A<CR> "force save
 map <leader>w :w!<CR>
 
 " Javascript context color folding
@@ -129,5 +128,45 @@ nnoremap ; :
 "quick exit
 nnoremap <space>d :wq!<cr>
 
-"Load that real shit...
+" Move cursor while in insert mode
+imap <C-h> <C-o>h
+imap <C-j> <C-o>j
+imap <C-k> <C-o>k
+imap <C-l> <C-o>l
+
+" Helpful underscore manipulation
+map <leader>w f_l
+map <leader>b hT_
+map <leader>e lt_
+omap u t_
+omap U f_
+
+" Move visual block up/down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Print current path
+cmap <C-e> <C-r>=expand('%:p:h')<CR>/
+
+" Make Y consistent with C and D
+nnoremap Y y$
+
+set splitbelow        " new hoz splits go below
+set splitright        " new vert splits go right
+
+" insert word of the line above
+inoremap <C-Y> <C-C>:let @z = @"<CR>mz
+			\:exec 'normal!' (col('.')==1 && col('$')==1 ? 'k' : 'kl')<CR>
+			\:exec (col('.')==col('$') - 1 ? 'let @" = @_' : 'normal! yw')<CR>
+			\`zp:let @" = @z<CR>a
+
+" Remove annoying highlight search thing
+nmap <Leader>. :nohl<cr>
+
+" save/quit
+map <C-s> <esc>:w<cr>
+imap <C-s> <esc>:w<cr>
+nmap <C-q> <esc>:q<cr>
+
+" Load bundles
 source ~/dotfiles/.vim/vimrc
