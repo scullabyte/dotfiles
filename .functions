@@ -244,3 +244,6 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Find process then terminate it: i.e. - 'burn skype'
+function burn() { kill `ps -ax | grep -i $@ | awk '{print $1}'`; }

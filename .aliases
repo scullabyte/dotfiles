@@ -164,3 +164,4 @@ alias t="trash"
 alias nw="~/node-webkit.app/Contents/MacOS/node-webkit"
 
 alias vd="vim -p \`git diff --name-only\`"
+

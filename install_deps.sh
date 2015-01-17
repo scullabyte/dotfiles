@@ -5,6 +5,7 @@ source .osx
 cd ~/code
 git clone https://github.com/rupa/z.git
 chmod +x ~/z/z.sh
+chmod +x ./brew.sh
 
 # Taken from Paul Irish
 # https://github.com/thebitguru/play-button-itunes-patch
