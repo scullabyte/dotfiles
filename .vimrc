@@ -59,7 +59,7 @@ set autowriteall
 
 let g:auto_save = 0  " enable AutoSave on Vim startup
 
-"Quick Search for TODO/FIXME
+" Quick Search for TODO/FIXME
 " MUTED BC OF ANGUALAR TEST BELOW
 " map <space>t :Ack! 'TODO\|FIXME'<CR>
 

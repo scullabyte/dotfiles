@@ -1,2 +1,4 @@
+.vim/bundle
 .vim/plugin
 *.DS_Store
+xcode
