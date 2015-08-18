@@ -30,7 +30,6 @@ brew install gnu-sed --with-default-names
 # running `chsh`.
 brew install bash
 brew install bash-completion
- 
 # Install `wget` with IRI support.
 brew install wget --with-iri
  

@@ -9,7 +9,7 @@
    lol = "log --graph --decorate --pretty=oneline --abbrev-commit --all"
    a = add -p
    af = add
-   afa = add . -A
+   afa = add -A
    b = branch
    cl = clone
    cm = commit -m

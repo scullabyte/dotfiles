@@ -29,6 +29,7 @@ endfunc
 map <space>i :call g:Invert()<CR>
 "Relativenumber
 function! NumberToggle()
+
    if(&relativenumber == 1)
       set number
    else
@@ -43,6 +44,8 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 autocmd FocusLost * nested silent! wall
 
+set nobackup
+set noswapfile
 
 " autoread and autowrite
 augroup save
@@ -59,13 +62,16 @@ set autowriteall
 
 let g:auto_save = 0  " enable AutoSave on Vim startup
 
-" Quick Search for TODO/FIXME
+"Quick Search for TODO/FIXME
 " MUTED BC OF ANGUALAR TEST BELOW
 " map <space>t :Ack! 'TODO\|FIXME'<CR>
 
 " Space to toggle folds.
 nnoremap <Space> za
 vnoremap <Space> za
+
+" Compile coffeescript in split pane
+nnoremap <Space>co :CoffeeCompile vert<CR>
 
 " Fold coffeescript
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
@@ -95,7 +101,7 @@ nnoremap <leader>f gg=G
 let g:notes_indexfile = '~/Drive/Notes'
 nnoremap <space>n :RecentNotes<CR>
 nnoremap <space>ns :SearchNotes //<left>
-nnoremap <space>nn :Note 
+nnoremap <space>nn :Note
 nnoremap <space>nd :DeleteNjavascript-good-parts.zipote <CR>
 nnoremap <space>nij i{{{javascript}}}<left><left><left><cr><cr><up>
 nnoremap <space>nih i{{{html}}}<left><left><left><cr><cr><up>
@@ -149,6 +155,7 @@ vnoremap K :m '<-2<CR>gv=gv
 cmap <C-e> <C-r>=expand('%:p:h')<CR>/
 
 " Make Y consistent with C and D
+
 nnoremap Y y$
 
 set splitbelow        " new hoz splits go below
@@ -162,6 +169,7 @@ inoremap <C-Y> <C-C>:let @z = @"<CR>mz
 
 " Remove annoying highlight search thing
 nmap <Leader>. :nohl<cr>
+nmap <Space>h :nohl<cr>
 
 " save/quit
 map <C-s> <esc>:w<cr>
