@@ -12,8 +12,10 @@
    afa = add -A
    b = branch
    cl = clone
+   ac = !git add -A && git commit -m
    cm = commit -m
-   c-a = commit --amend
+   ca = commit --amend --no-edit
+   cam = commit --amend
    c-pi = cherry-pick
    co = checkout
    com = checkout master
