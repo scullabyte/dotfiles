@@ -16,7 +16,7 @@ alias h="history"
 alias j="jobs"
 
 # Use harmony for gulp
-alias gulp='node --harmony `which gulp`'
+# alias gulp='node --harmony `which gulp`'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -157,7 +157,7 @@ alias spot="osascript ~/code/SpotifyControl/SpotifyControl.scpt play"
 alias sp="osascript ~/code/SpotifyControl/SpotifyControl.scpt play"
 alias ss="osascript ~/code/SpotifyControl/SpotifyControl.scpt pause"
 alias sj="osascript ~/code/SpotifyControl/SpotifyControl.scpt next"
-alias sk="osascript ~/code/SpoifyControl/SpotifyControl.scpt previous"
+alias sk="osascript ~/code/SpoifyControl/SpotifyControl.scpt prev"
 #Sindres trash (instead of rm)
 alias t="trash"
 

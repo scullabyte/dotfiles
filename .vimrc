@@ -48,19 +48,19 @@ set nobackup
 set noswapfile
 
 " autoread and autowrite
-augroup save
-  au!
-  au FocusLost * wall
-augroup END
-set nohidden
-set nobackup
-set noswapfile
-set nowritebackup
-set autoread
-set autowrite
-set autowriteall
+" augroup save
+"   au!
+"   au FocusLost * wall
+" augroup END
+" set nohidden
+" set nobackup
+" set noswapfile
+" set nowritebackup
+" set autoread
+" set autowrite
+" set autowriteall
 
-let g:auto_save = 0  " enable AutoSave on Vim startup
+" let g:auto_save = 0  " enable AutoSave on Vim startup
 
 "Quick Search for TODO/FIXME
 " MUTED BC OF ANGUALAR TEST BELOW
@@ -71,7 +71,7 @@ nnoremap <Space> za
 vnoremap <Space> za
 
 " Compile coffeescript in split pane
-nnoremap <Space>co :CoffeeCompile vert<CR>
+nnoremap <Space>co :CoffeeCompile vert<CR><c-w>w
 
 " Fold coffeescript
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
@@ -131,6 +131,7 @@ nnoremap <space>D :diffoff!<CR>
 
 nnoremap <space>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap ; :
+
 "quick exit
 nnoremap <space>d :wq!<cr>
 
