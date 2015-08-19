@@ -14,7 +14,7 @@
    cl = clone
    ac = !git add -A && git commit -m
    cm = commit -m
-   ca = commit --amend --no-edit
+   ca = !git add -A && git commit --amend --no-edit
    cam = commit --amend
    c-pi = cherry-pick
    co = checkout
@@ -26,6 +26,7 @@
    i = init
    l = log -p
    p = push
+   po = push origin
    pum = push upstream master
    pus = push upstream v1.2.x
    r = rebase
