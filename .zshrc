@@ -13,6 +13,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 
+# Makes Tmuxinator windows display properly
+export DISABLE_AUTO_TITLE=true
 
 # source ~/.bin/tmuxinator.zsh
 
