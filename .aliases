@@ -7,16 +7,21 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias dot="cd ~/dotfiles"
 alias d="cd ~/Drive"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias dev="cd ~/Development"
+alias dv="cd ~/Development"
 alias g="git"
 alias h="history"
 alias j="jobs"
 
 # Use harmony for gulp
 # alias gulp='node --harmony `which gulp`'
+
+alias build="npm run build"
+alias dev="npm run dev"
+alias prod="npm run prod"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
