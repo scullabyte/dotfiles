@@ -308,7 +308,7 @@ if count(s:settings.plugin_groups, 'core') "{{{
   let g:airline#extensions#tabline#left_alt_sep='¦'
   "}}}
   NeoBundle 'edkolev/tmuxline.vim' "{{{
-  let g:airline#extensions#tmuxline#enabled = 0
+  let g:airline#extensions#tmuxline#enabled = 1
   "}}}
   NeoBundle 'xolox/vim-misc'
   NeoBundle 'tpope/vim-surround'

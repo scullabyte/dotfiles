@@ -129,6 +129,10 @@ nnoremap <space>et :vsplit ~/.tmux.conf<cr>
 nnoremap <space>eg :vsplit ~/.gitconfig<cr>
 nnoremap <space>D :diffoff!<CR>
 
+"Tmux airline
+
+let g:tmuxline_powerline_separators = 1
+
 nnoremap <space>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap ; :
 
