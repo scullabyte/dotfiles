@@ -6,6 +6,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias adfire='cd ~/Development/projects/adfire'
+
 # Shortcuts
 alias dot="cd ~/dotfiles"
 alias d="cd ~/Drive"
@@ -15,6 +17,8 @@ alias dv="cd ~/Development"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+# alias gulp='node --harmony `which gulp`'
 
 # Use harmony for gulp
 # alias gulp='node --harmony `which gulp`'

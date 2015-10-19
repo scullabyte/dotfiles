@@ -127,6 +127,7 @@ nnoremap <space>ev :vsplit $MYVIMRC<cr>
 nnoremap <space>evv :vsplit ~/dotfiles/.vim/vimrc<cr>
 nnoremap <space>et :vsplit ~/.tmux.conf<cr>
 nnoremap <space>eg :vsplit ~/.gitconfig<cr>
+nnoremap <space>ea :vsplit ~/.aliases<cr>
 nnoremap <space>D :diffoff!<CR>
 
 "Tmux airline
@@ -181,5 +182,10 @@ map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
 nmap <C-q> <esc>:q<cr>
 
+" Stops vim from saving twice (Gulp watch issues)
+set nowritebackup
+
+
 " Load bundles
 source ~/dotfiles/.vim/vimrc
+
