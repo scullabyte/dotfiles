@@ -1,7 +1,7 @@
 let g:vimsauce = {}
 
 let g:vimsauce.version = 1
-let g:vimsauce.default_indent = 3
+let g:vimsauce.default_indent = 2
 let g:vimsauce.max_column = 80
 let g:vimsauce.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm']
 let g:vimsauce.colorscheme = 'github'
@@ -15,6 +15,18 @@ let g:vimsauce.colorscheme = g:dark
 
 "Turn on indent guides at start
 let g:indent_guides_auto_colors = 1
+
+"Coffeescript two space indent
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
+"Shortcuts for fugitive glog
+nmap <c-j> [q
+nmap <c-k> ]q
+nmap <c-J> [Q
+nmap <c-K> ]Q
+
+nnoremap <silent> <leader>gll :Glog --reverse<CR>
+
 
 "invertColors
 function! g:Invert()

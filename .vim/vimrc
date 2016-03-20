@@ -373,7 +373,7 @@ if count(s:settings.plugin_groups, 'javascript') "{{{
   "}}}
   " NeoBundleLazy 'leafgarland/typescript-vim', {'autoload':{'filetypes':['typescript']}}
   NeoBundleLazy 'mintplant/vim-literate-coffeescript', {'autoload':{'filetypes':['coffee']}}
-  NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee']}}
+  NeoBundleLazy 'kchmck/vim-coffee-script', {'autoload':{'filetypes':['coffee', 'spec.coffee']}}
   NeoBundleLazy 'mmalecki/vim-node.js', {'autoload':{'filetypes':['javascript']}}
   NeoBundleLazy 'leshill/vim-json', {'autoload':{'filetypes':['javascript','json']}}
   NeoBundleLazy 'othree/javascript-libraries-syntax.vim', {'autoload':{'filetypes':['javascript','coffee','ls','typescript']}}
@@ -408,7 +408,7 @@ if count(s:settings.plugin_groups, 'scm') "{{{
 
   NeoBundle 'tpope/vim-fugitive' "{{{
   nnoremap <silent> <leader>gs :Gstatus<CR>
-  nnoremap <silent> <leader>gd :Gdiff<CR> :call g:Invert()<CR>
+  nnoremap <silent> <leader>gd :Gvdiff<CR> :call g:Invert()<CR>
   nnoremap <silent> <leader>gc :Gcommit<CR>
   nnoremap <silent> <leader>gb :Gblame<CR>
   nnoremap <silent> <leader>gl :Glog<CR>
@@ -419,7 +419,7 @@ if count(s:settings.plugin_groups, 'scm') "{{{
   autocmd BufReadPost fugitive://* set bufhidden=delete
   "}}}
 
-  NeoBundle 'airblade/vim-gitgutter'
+  " NeoBundle 'airblade/vim-gitgutter'
 
   NeoBundle 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} "{{{
   nnoremap <silent> <leader>gv :Gitv<CR>

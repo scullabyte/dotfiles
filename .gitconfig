@@ -28,7 +28,6 @@
    p = push
    po = push origin
    pum = push upstream master
-   pus = push upstream v1.2.x
    r = rebase
    ri = rebase -i
    s = status
@@ -49,5 +48,3 @@
    tool = vimdiff
 [difftool]
    prompt = false
-[user]
-	name = scullabyte
