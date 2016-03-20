@@ -3,29 +3,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
+alias ~="cd ~"
 alias -- -="cd -"
 
-alias adfire='cd ~/Development/projects/adfire'
-
 # Shortcuts
-alias dot="cd ~/dotfiles"
-alias d="cd ~/Drive"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias dv="cd ~/Development"
 alias g="git"
 alias h="history"
 alias j="jobs"
-
-# alias gulp='node --harmony `which gulp`'
-
-# Use harmony for gulp
-# alias gulp='node --harmony `which gulp`'
-
-alias build="npm run build"
-alias dev="npm run dev"
-alias prod="npm run prod"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -33,6 +17,9 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
 	colorflag="-G"
 fi
+
+alias empty="sudo rm -rf ~/.Trash/*"
+alias flush="sudo killall -HUP mDNSResponder"
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
