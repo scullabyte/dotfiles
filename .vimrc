@@ -1,17 +1,20 @@
-let g:vimsauce = {}
+let g:dotvim = {}
 
-let g:vimsauce.version = 1
-let g:vimsauce.default_indent = 2
-let g:vimsauce.max_column = 80
-let g:vimsauce.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm']
-let g:vimsauce.colorscheme = 'github'
+let g:dotvim.version = 1
+let g:dotvim.default_indent = 2
+let g:dotvim.max_column = 80
+let g:dotvim.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm', 'go']
+let g:dotvim.colorscheme = 'github'
 let g:dark='molokai'
 let g:light='github'
 autocmd BufReadPre *.js let b:javascript_lib_use_jquery = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_underscore = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
 autocmd BufReadPre *.js let b:javascript_lib_use_sugar = 1
-let g:vimsauce.colorscheme = g:dark
+
+autocmd BufNewFile,BufRead *.ts,*.tsx setfiletype typescript
+
+let g:dotvim.colorscheme = g:dark
 
 "Turn on indent guides at start
 let g:indent_guides_auto_colors = 1
@@ -30,12 +33,12 @@ nnoremap <silent> <leader>gll :Glog --reverse<CR>
 
 "invertColors
 function! g:Invert()
-   if(g:vimsauce.colorscheme == g:dark)
-      let g:vimsauce.colorscheme = g:light
+   if(g:dotvim.colorscheme == g:dark)
+      let g:dotvim.colorscheme = g:light
    else
-      let g:vimsauce.colorscheme = g:dark
+      let g:dotvim.colorscheme = g:dark
    endif
-   exec 'colorscheme '.g:vimsauce.colorscheme
+   exec 'colorscheme '.g:dotvim.colorscheme
 endfunc
 
 map <space>i :call g:Invert()<CR>
@@ -122,6 +125,19 @@ nnoremap <space>nih i{{{html}}}<left><left><left><cr><cr><up>
 map <space>t :A<CR> "force save
 map <leader>w :w!<CR>
 
+"Tern 
+map <space>td :TernDef<CR>
+map <space>tt :TernType<CR>
+map <space>tr :TernRefs<CR>
+map <space>tre :TernRename<CR>
+
+"Template Strings
+map <space>jh :JsPreTmpl html<CR>
+map <space>jc :JsPreTmplClear<CR>
+autocmd FileType javascript JsPreTmpl html
+autocmd FileType typescript JsPreTmpl markdown
+" autocmd FileType typescript syn clear foldBraces
+
 " Javascript context color folding
 let g:js_context_colors = [ 252, 10, 11, 172, 1, 161, 63 ]
 let g:js_context_colors_enabled = 0
@@ -199,5 +215,4 @@ set nowritebackup
 
 
 " Load bundles
-source ~/dotfiles/.vim/vimrc
-
+source ~/.vim/vimrc
