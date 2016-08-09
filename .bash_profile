@@ -1,4 +1,6 @@
+
 export PATH=${PATH}:/usr/local/Cellar/android-sdk/22.6.2/platforms:/usr/local/Cellar/android-sdk/22.6.2/tools
+
 
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";

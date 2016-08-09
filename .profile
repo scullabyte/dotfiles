@@ -5,3 +5,5 @@ test -r /sw/bin/init.sh && . /sw/bin/init.sh
 # echo d|mail
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export GOPATH="$HOME/work"
