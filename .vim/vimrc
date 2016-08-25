@@ -334,6 +334,8 @@ if count(s:settings.plugin_groups, 'web') "{{{
   Plugin 'digitaltoad/vim-jade', {'autoload':{'filetypes':['jade']}}
   Plugin 'juvenn/mustache.vim', {'autoload':{'filetypes':['mustache']}}
   Plugin 'gregsexton/MatchTag', {'autoload':{'filetypes':['html','xml']}}
+  Plugin 'diepm/vim-rest-console'
+
   Plugin 'mattn/emmet-vim', {'autoload':{'filetypes':['html','xml','xsl','xslt','xsd','css','sass','scss','less','mustache']}} "{{{
   function! s:zen_html_tab()
     let line = getline('.')
