@@ -41,6 +41,8 @@ brew install narwhal
  
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
+# Install cmake for YouCompleteMe (vim) and compiling C-family languages
+brew install cmake
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen

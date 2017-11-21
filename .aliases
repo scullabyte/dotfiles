@@ -5,6 +5,10 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
+alias mux="tmuxinator"
+alias py="python"
+alias google="python -m googlesamples.assistant.grpc.pushtotalk"
+alias goo="python -m googlesamples.assistant.grpc.pushtotalk"
 
 alias htl="heroku logs -t"
 alias ht="heroku logs -t | grep -E 'MADE|POSTBACK|GOOD|BAD'"
@@ -13,6 +17,11 @@ alias ht="heroku logs -t | grep -E 'MADE|POSTBACK|GOOD|BAD'"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+alias speedtest='curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

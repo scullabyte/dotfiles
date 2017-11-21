@@ -3,7 +3,7 @@ let g:dotvim = {}
 let g:dotvim.version = 1
 let g:dotvim.default_indent = 2
 let g:dotvim.max_column = 80
-let g:dotvim.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm', 'go']
+let g:dotvim.plugin_groups_include = ['core', 'web', 'javascript', 'indents', 'editing', 'navigation', 'autocomplete', 'misc', 'scm', 'go', 'unite']
 let g:dotvim.colorscheme = 'github'
 let g:dark='molokai'
 let g:light='github'
@@ -40,6 +40,12 @@ function! g:Invert()
    endif
    exec 'colorscheme '.g:dotvim.colorscheme
 endfunc
+
+nnoremap <space>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <space>gr :YcmCompleter GoToReferences<CR>
+nnoremap <space>gg :YcmCompleter GetType<CR>
+nnoremap <space>gD :YcmCompleter GetDoc<CR>
+nnoremap <space>rr :YcmCompleter RefactorRename<CR>
 
 map <space>i :call g:Invert()<CR>
 "Relativenumber
@@ -94,7 +100,7 @@ autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
 noremap <leader>yy "*Y
-set clipboard=unnamed
+
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>"
 
@@ -160,7 +166,7 @@ nnoremap <space>D :diffoff!<CR>
 
 "Tmux airline
 
-let g:tmuxline_powerline_separators = 1
+" let g:tmuxline_powerline_separators = 1
 
 nnoremap <space>ww mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 nnoremap ; :
