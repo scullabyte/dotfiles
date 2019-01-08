@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-# source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 for file in ~/.{aliases,functions,extra}; do
