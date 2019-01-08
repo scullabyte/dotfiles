@@ -49,6 +49,11 @@ brew install homebrew/dupes/screen
 brew install homebrew/php/php55 --with-gmp
  
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
+brew install tmux
+brew install macvim
+brew install tmux-pasteboard
+brew install ag
+brew install reattach-to-user-namespace
 brew install bfg
 brew install binutils
 brew install binwalk
@@ -63,6 +68,7 @@ brew install john
 brew install knock
 brew install nmap
 brew install pngcheck
+brew install powerlevel9k
 brew install socat
 brew install sqlmap
 brew install tcpflow

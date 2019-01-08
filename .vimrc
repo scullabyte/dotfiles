@@ -15,6 +15,10 @@ autocmd BufReadPre *.js let b:javascript_lib_use_sugar = 1
 autocmd BufNewFile,BufRead *.ts,*.tsx setfiletype typescript
 
 let g:dotvim.colorscheme = g:dark
+let g:jsx_ext_required = 0
+let g:javascript_plugin_flow = 1
+
+
 
 "Turn on indent guides at start
 let g:indent_guides_auto_colors = 1

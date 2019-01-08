@@ -307,6 +307,7 @@ if count(s:settings.plugin_groups, 'core') "{{{
   Plugin 'tpope/vim-repeat'
   Plugin 'tpope/vim-dispatch'
   Plugin 'tpope/vim-eunuch'
+  " Plugin 'w0rp/ale'
   Plugin 'xolox/vim-notes' "{{{
   :let g:notes_directories = ['~/Drive/Notes']
   "}}}
@@ -339,6 +340,7 @@ if count(s:settings.plugin_groups, 'web') "{{{
     return "\<c-y>n"
   endfunction
   autocmd FileType xml,xsl,xslt,xsd,css,sass,scss,less,mustache imap <buffer><tab> <c-y>,
+  autocmd FileType javascript.jsx imap <buffer> <s-tab> <c-y>,
   autocmd FileType html imap <buffer><expr><tab> <sid>zen_html_tab()
   "}}}
 endif "}}}
@@ -347,6 +349,8 @@ if count(s:settings.plugin_groups, 'javascript') "{{{
   Plugin 'burnettk/vim-angular'
   Plugin 'claco/jasmine.vim'
   Plugin 'pangloss/vim-javascript'
+  Plugin 'mxw/vim-jsx'
+  " Plug 'epilande/vim-react-snippets'
   Plugin 'maksimr/vim-jsbeautify'
   "{{{
   nnoremap <leader>j :call JsBeautify()<cr>
@@ -431,13 +435,13 @@ if count(s:settings.plugin_groups, 'autocomplete') "{{{
     let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
     let g:ycm_filetype_blacklist={'unite': 1}
     "}}}
-    " Plugin 'SirVer/ultisnips' "{{{
-    " let g:UltiSnipsExpandTrigger="<tab>"
-    " let g:UltiSnipsJumpForwardTrigger="<tab>"
-    " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-    " let g:UltiSnipsSnippetsDir='~/.vim/snippets'
-    " let g:UltiSnipsEditSplit="vertical"
-    " "}}}
+    Plugin 'SirVer/ultisnips' "{{{
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    let g:UltiSnipsSnippetsDir='~/.vim/snippets'
+    let g:UltiSnipsEditSplit="vertical"
+    "}}}
   else
     Plugin 'Shougo/neosnippet.vim' "{{{
     let g:neosnippet#snippets_directory='~/.vim/snippets'
@@ -620,6 +624,7 @@ if count(s:settings.plugin_groups, 'misc') "{{{
   let g:syntastic_style_error_symbol = '✠'
   let g:syntastic_warning_symbol = '∆'
   let g:syntastic_style_warning_symbol = '≈'
+  let g:syntastic_javascript_checkers = ['eslint']
   "}}}
   Plugin 'mattn/gist-vim', { 'depends': 'mattn/webapi-vim', 'autoload': { 'commands': 'Gist' } } "{{{
   let g:gist_post_private=1

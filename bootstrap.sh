@@ -15,6 +15,10 @@ git clone https://github.com/thebitguru/play-button-itunes-patch
 
 git clone git://github.com/dronir/SpotifyControl.git
 
+# ZSH Powerline Theme
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+
 # nvm for node versioning
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 
