@@ -152,7 +152,6 @@ alias reload="exec $SHELL -l"
 
 # Not Mathius
 alias ls="ls -la"
-alias bower='noglob bower'
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="mvim -v"
 #
@@ -173,3 +172,5 @@ alias vd="vim -p \`git diff --name-only\`"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+
+alias define='googler -n 2 define'

@@ -53,4 +53,5 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [user]
+	email = scullabyte@gmail.com
 	name = scullabyte

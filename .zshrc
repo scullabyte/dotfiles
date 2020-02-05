@@ -109,7 +109,13 @@ PERL_MB_OPT="--install_base \"/Users/admin/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/admin/perl5"; export PERL_MM_OPT;
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/admin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/admin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/admin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/admin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/admin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/admin/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="$PATH:`pwd`/flutter/bin"
+
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/admin/googleAuth/trancend.json"

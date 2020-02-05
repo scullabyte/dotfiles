@@ -21,3 +21,4 @@ export LC_ALL=en_US.UTF-8
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export GH_TOKEN="5425fb08aa5a62b49a9810f4a630a47c6aa9da53"
