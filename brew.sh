@@ -60,6 +60,7 @@ brew install binwalk
 brew install cifer
 brew install dex2jar
 brew install dns2tcp
+brew install fastlane
 brew install fcrackzip
 brew install foremost
 brew install hashpump
