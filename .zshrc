@@ -95,8 +95,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 
-export NVM_DIR="/Users/admin/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 
 export GOPATH="$HOME/work"
 export PATH="$GOPATH/bin:$PATH"
@@ -116,6 +118,7 @@ if [ -f '/Users/admin/google-cloud-sdk/completion.zsh.inc' ]; then source '/User
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:$HOME/flutter/bin"
+
 
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/admin/googleAuth/trancend.json"
