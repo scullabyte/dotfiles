@@ -1,7 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
 
-source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+# source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 # ZSH_THEME="powerlevel9k/powerlevel9k"
+
+ZSH_THEME="powerline"
 
 for file in ~/.{aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -24,7 +26,7 @@ export DISABLE_AUTO_TITLE=true
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="miloshadzic"
+# ZSH_THEME="miloshadzic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -64,7 +66,7 @@ ZSH_THEME="miloshadzic"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git, node, npm, bower, brew, osx, extract, z, zsh-nvm)
+# plugins=(git, node, npm, bower, brew, osx, extract, z, zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,14 +93,14 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+export PATH="$PATH:$HOME/flutter/bin"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 
 
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
+export NVM_DIR="/Users/admin/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export GOPATH="$HOME/work"
 export PATH="$GOPATH/bin:$PATH"
@@ -111,14 +113,15 @@ PERL_MB_OPT="--install_base \"/Users/admin/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/admin/perl5"; export PERL_MM_OPT;
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/admin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/admin/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/admin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/admin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/admin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/admin/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/admin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/admin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-export PATH="$PATH:$HOME/flutter/bin"
-
-
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/admin/googleAuth/trancend.json"
+# Allows wireless android debugging
+# Make sure to go to Settings > About to find your Android phone's ip address
+adb() {
+    #do things with parameters like $1 such as
+    ~/./dotfiles/platform-tools/adb tcpip 5555
+    ~/./dotfiles/platform-tools/adb connect "$1"
+}

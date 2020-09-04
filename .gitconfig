@@ -55,3 +55,4 @@
 [user]
 	email = scullabyte@gmail.com
 	name = scullabyte
+    gpgsign = false
