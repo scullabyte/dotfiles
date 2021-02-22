@@ -151,21 +151,14 @@ alias reload="exec $SHELL -l"
 # command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
 
 # Not Mathius
+alias la="ls -la"
 alias ls="ls -la"
 alias tmux="TERM=screen-256color-bce tmux"
 alias vim="mvim -v"
-#
-#spotify controls
-alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
-alias spot="osascript ~/code/SpotifyControl/SpotifyControl.scpt play"
-alias sp="osascript ~/code/SpotifyControl/SpotifyControl.scpt play"
-alias ss="osascript ~/code/SpotifyControl/SpotifyControl.scpt pause"
-alias sj="osascript ~/code/SpotifyControl/SpotifyControl.scpt next"
-alias sk="osascript ~/code/SpoifyControl/SpotifyControl.scpt prev"
+
 #Sindres trash (instead of rm)
 alias t="trash"
 
-alias nw="~/node-webkit.app/Contents/MacOS/node-webkit"
 
 alias vd="vim -p \`git diff --name-only\`"
 
