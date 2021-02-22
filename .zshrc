@@ -3,7 +3,8 @@ ZSH=$HOME/.oh-my-zsh
 # source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 
-ZSH_THEME="powerline"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 
 for file in ~/.{aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
