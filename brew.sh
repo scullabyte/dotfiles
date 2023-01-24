@@ -99,6 +99,8 @@ arch -arm64 brew install webkit2png
 arch -arm64 brew install zopfli
 arch -arm64 brew install postgresql
 arch -arm64 brew install chruby ruby-install
+arch -arm64 brew install java
+arch -arm64 brew install openjdk@11
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
